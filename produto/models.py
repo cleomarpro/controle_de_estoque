@@ -73,7 +73,7 @@ class Produto (models.Model):
             self.percentagem_de_lucro = lucro_estimado
             Produto.objects.filter(id=self.id).update(
                 percentagem_de_lucro = lucro_estimado)
-
+        
 
 class EntradaMercadoria(models.Model):
     produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
