@@ -20,3 +20,6 @@ class SaidaMercadoria(models.Model):
     data_hora = models.DateTimeField(default=timezone.now)
     user = models.CharField(max_length=100, blank=True, null=True)
     usuarios = models.ForeignKey(Usuarios, null=True, on_delete=models.CASCADE)
+
+    def __str__(self):# METODO CONSTRUTOR
+        return str(self.produto.nome)+ ' - ' + str(self.produto.estoque)

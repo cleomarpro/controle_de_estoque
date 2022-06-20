@@ -21,3 +21,6 @@ class EntradaMercadoria(models.Model):
     validade_produto = models.DateField(blank=True, null=True)
     user = models.CharField(max_length=100, blank=True, null=True)
     usuarios = models.ForeignKey(Usuarios, null=True, on_delete=models.CASCADE)
+
+    def __str__(self):# METODO CONSTRUTOR
+        return str(self.produto.nome)+ ' - ' + str(self.produto.estoque)

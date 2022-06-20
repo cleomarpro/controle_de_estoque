@@ -29,3 +29,6 @@ class Usuarios(models.Model):
     nome_fantazia = models.CharField(max_length=50, blank=True)
     data_de_criacao = models.DateField(max_length=30, null= True, blank=True, verbose_name="Data de criação")
     data_hora = models.DateTimeField(default=timezone.now)
+    
+    def __str__(self):
+            return str(self.id)+ ' ' + str(self.nome_fantazia) + ' User' + str(self.user.id)

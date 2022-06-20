@@ -1,3 +1,8 @@
 from django.contrib import admin
+#from core.models import Caixa
+from .models import(
+    Usuarios,
+    
+)
 
-# Register your models here.
+admin.site.register(Usuarios)

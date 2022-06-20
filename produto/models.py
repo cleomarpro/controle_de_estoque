@@ -20,6 +20,9 @@ class Categoria (models.Model):
     user = models.CharField(max_length=100, blank=True, null=True)
     usuarios = models.ForeignKey(Usuarios, null=True, on_delete=models.CASCADE)
 
+    def __str__(self): # METODO CONSTRUTOR
+        return str(self.nome)+ ' - ' +str(self.id)
+
 class Produto (models.Model):
     nome = models.CharField(max_length=30,  blank=True)
     categoria = models.ForeignKey(Categoria, verbose_name='Categoria', on_delete=models.CASCADE, default=1)
@@ -34,3 +37,6 @@ class Produto (models.Model):
     imagem = models.ImageField( blank=True)
     user = models.CharField(max_length=100, blank=True, null=True)
     usuarios = models.ForeignKey(Usuarios, null=True, on_delete=models.CASCADE)
+
+    def __str__(self): # METODO CONSTRUTOR
+        return str(self.nome)+ ' - ' +str(self.id)
