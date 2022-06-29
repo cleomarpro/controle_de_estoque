@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 #from rest_framework.permissions import IsAuthenticated
 
 
-
+                                                                                                
 class EntradaMercadoriaCreate( APIView):
     def get(self, request):
         user = request.user.has_perm('produto.view_entradamercadoria')
@@ -36,18 +36,12 @@ class EntradaMercadoriaCreate( APIView):
         return Response(serializer.errors, status = status.HTTP_404_BAD_CREATED)
 
 class EntradaMercadoriaDetailChangeDelete(APIView):
-    def user_logado (self, request, id):
-        user_logado = request.user # Obitendo o usuário logado
-        user_logado.id # obitendo o ID do usuário logado
-        return User.objects.get(id  = user_logado)
-    
+
     def get_object(self, pk):
         if EntradaMercadoria.objects.get(pk = pk):
             return EntradaMercadoria.objects.get(pk = pk)
         return Response( status = status.HTTP_404_NOT_FOUND)
         
-       
-
     def get(self, request, pk):
         user = request.user.has_perm('produto.view_entradamercadoria')
         if user == False :
