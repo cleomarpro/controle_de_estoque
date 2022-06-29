@@ -5,5 +5,5 @@ from rest_framework import serializers
 class EntradaMercadoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = EntradaMercadoria
-        fields = ['id', 'quantidade', 'produto','usuarios']
+        fields = ['id', 'quantidade', 'produto','usuarios','user']
 
