@@ -25,13 +25,15 @@ class EntradaMercadoriaCreate( APIView):
         #return Response( status = status.HTTP_404_NOT_FOUND)
 
     def post(self, request):
+        user_logado = request.user # Obitendo o usuário logado
+        user_logado = user_logado.id # obitendo o ID do usuário logado
         user = request.user.has_perm('produto.add_entradamercadoria')
         if user == False :
             return Response( status = status.HTTP_401_UNAUTHORIZED)
 
         serializer = EntradaMercadoriaSerializer(data = request.data)
         if serializer.is_valid(raise_exception=True):
-            serializer.save()
+            serializer.save(user = user_logado, usuarios_id = 1)
             return Response(serializer.data, status = status.HTTP_201_CREATED)
         return Response(serializer.errors, status = status.HTTP_404_BAD_CREATED)
 
