@@ -43,9 +43,9 @@ INSTALLED_APPS = [
     'saida_de_mercadoria',
     'usuarios',
     'rest_framework',
-    'login_authentication',
-    'rest_framework.authtoken',
-    'corsheaders', 
+    #'login_authentication',
+    #'rest_framework.authtoken',
+    #'corsheaders', 
     #'rest_framework_simplejwt',
 ]
 
@@ -114,24 +114,30 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+
+"""
 JWT_AUTH = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
 }
+"""
  #Internationalization
  #://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

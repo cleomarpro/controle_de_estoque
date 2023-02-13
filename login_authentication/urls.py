@@ -9,5 +9,5 @@ router.register(r'groups', GroupViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('api-token-auth/', views.obtain_auth_token, name='api-tokn-auth'), 
+    #path('api-token-auth/', views.obtain_auth_token, name='api-tokn-auth'), 
 ]
