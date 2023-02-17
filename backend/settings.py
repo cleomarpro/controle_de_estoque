@@ -43,10 +43,10 @@ INSTALLED_APPS = [
     'saida_de_mercadoria',
     'usuarios',
     'rest_framework',
-    #'login_authentication',
+    'login_authentication',
     #'rest_framework.authtoken',
     #'corsheaders', 
-    #'rest_framework_simplejwt',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -115,13 +115,13 @@ REST_FRAMEWORK = {
     )
 }
 
-"""
+
 JWT_AUTH = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
 }
-"""
+
  #Internationalization
  #://docs.djangoproject.com/en/3.0/topics/i18n/
 
