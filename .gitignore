@@ -3,6 +3,7 @@ db.gestao_vendas
 .ipynb_checkpoints
 .vscode
 evenv/
+cevenv/
 *.sqlite3
 *.idea
 *pyc

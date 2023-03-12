@@ -1,5 +1,5 @@
 
-from produto.models import EntradaMercadoria
+from entrada_de_mercadoria.models import EntradaMercadoria
 from entrada_de_mercadoria.serializers import EntradaMercadoriaSerializer
 #from usuarios.models import Usuarios
 from rest_framework import status

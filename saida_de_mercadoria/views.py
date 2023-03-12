@@ -1,4 +1,4 @@
-from produto.models import SaidaMercadoria
+from saida_de_mercadoria.models import SaidaMercadoria
 from saida_de_mercadoria.serializers import SaidaMercadoriaSerializer
 #from usuarios.models import Usuarios
 from rest_framework import status

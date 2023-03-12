@@ -3,12 +3,7 @@ from django.contrib import admin
 from .models import(
     Categoria,
     Produto,
-    SaidaMercadoria,
-    EntradaMercadoria,
-    
 )
 
 admin.site.register(Categoria)
 admin.site.register(Produto)
-admin.site.register(SaidaMercadoria)
-admin.site.register(EntradaMercadoria)

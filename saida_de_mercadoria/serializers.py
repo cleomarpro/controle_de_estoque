@@ -1,4 +1,4 @@
-from produto.models import  SaidaMercadoria
+from saida_de_mercadoria.models import  SaidaMercadoria
 from rest_framework import serializers
 
 
